@@ -65,12 +65,12 @@ var Playback = function() {
                         that.emit('playing', track);
                     }
                 } else if (that.playing !== track) {
-                    that.playing = track;
                     if (track) {
                         that.emit('playing', track);
                     } else {
-                        that.emit('paused', track);
+                        that.emit('paused', that.playing);
                     }
+                    that.playing = track;
                 }
             } else {
                 that.playing = null;
