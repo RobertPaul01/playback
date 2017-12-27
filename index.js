@@ -76,7 +76,7 @@ var Playback = function() {
                 that.playing = null;
             }
         });
-    }, 200 );
+    }, 15000 );
 };
 util.inherits(Playback, events.EventEmitter);
 
